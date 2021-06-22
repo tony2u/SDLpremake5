@@ -1,4 +1,4 @@
-SDL2_image_DIR="SDL2_image-2.0.1/"
+SDL2_image_DIR="SDL2_image-2.0.5/"
 
 project "SDL2_image"
 do
@@ -19,7 +19,7 @@ do
         SDL2_image_DIR.."IMG_*.c",
     }
     includedirs {
-        "SDL2-2.0.4/include",
+        SDL_DIR .. "include",
         ZLIB_DIR,
         LIBPNG_DIR,
     }
@@ -45,10 +45,11 @@ do
         "PNG_USE_DLL",
         "ZLIB_DLL",
     }
-    buildoptions { "/wd4996" }
+    if (string.sub(_ACTION, 1, 2) == "vs") then
+        buildoptions { "/wd4996" }
+    end
     libdirs {}
     links {
         "SDL2", "zlib", "libpng",
     }
 end
-
