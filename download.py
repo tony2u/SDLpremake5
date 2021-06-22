@@ -93,6 +93,6 @@ if __name__=='__main__':
     print('''
     all package downloaded and extracted.
 
-    run premake5_vs2015.bat and build build/lib/SDL2.sln
+    run premake5_vs2015.bat and build build/SDL2.sln
     ''')
 
