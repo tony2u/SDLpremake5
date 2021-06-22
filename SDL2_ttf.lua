@@ -1,4 +1,4 @@
-SDL2_ttf_DIR="SDL2_ttf-2.0.14/"
+SDL2_ttf_DIR="SDL2_ttf-2.0.15/"
 
 project "SDL2_ttf"
 do
@@ -18,18 +18,19 @@ do
         SDL2_ttf_DIR.."SDL_ttf.c",
     }
     includedirs {
-        "SDL2-2.0.4/include",
-        "freetype-2.6.3/include",
+        SDL_DIR .. "include",
+        FREETYPE_DIR .. "include",
     }
     defines {
         "WIN32",
         "_WINDOWS",
     }
-    buildoptions { "/wd4996" }
+    if (string.sub(_ACTION, 1, 2) == "vs") then
+        buildoptions { "/wd4996" }
+    end
     libdirs {}
     links {
         "SDL2",
         "freetype",
     }
 end
-
