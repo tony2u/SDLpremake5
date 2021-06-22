@@ -54,14 +54,15 @@ class Package:
 
 
 packages=[
-        Package('http://zlib.net/zlib128.zip', 'zlib-1.2.8'),
-        Package('http://ring.u-toyama.ac.jp/archives/graphics/freetype/freetype2/ft263.zip', 'freetype-2.6.3'),
-        Package('http://download.sourceforge.net/libpng/libpng-1.6.21.tar.xz'),
+        Package('http://zlib.net/zlib1211.zip', 'zlib-1.2.11'),
+        Package('http://ring.u-toyama.ac.jp/archives/graphics/freetype/freetype2/ft265.zip', 'freetype-2.6.5'),
+        Package('http://download.sourceforge.net/libpng/libpng-1.6.37.tar.xz'),
 
-        Package('https://www.libsdl.org/release/SDL2-2.0.4.zip'),
-        Package('http://www.ferzkopp.net/Software/SDL2_gfx/SDL2_gfx-1.0.1.zip'),
-        Package('https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-2.0.14.zip'),
-        Package('https://www.libsdl.org/projects/SDL_image/release/SDL2_image-2.0.1.zip'),
+        Package('https://www.libsdl.org/release/SDL2-2.0.14.zip'),
+        Package('http://www.ferzkopp.net/Software/SDL2_gfx/SDL2_gfx-1.0.4.zip'),
+        Package('https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-2.0.15.zip'),
+        Package('https://www.libsdl.org/projects/SDL_image/release/SDL2_image-2.0.5.zip'),
+        Package('https://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-2.0.4.zip'),
         ]
 
 
@@ -92,6 +93,6 @@ if __name__=='__main__':
     print('''
     all package downloaded and extracted.
 
-    run premake5_vs2015.bat and build build/SDL2.sln
+    run premake5_vs2015.bat and build build/lib/SDL2.sln
     ''')
 
