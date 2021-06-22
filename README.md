@@ -6,11 +6,13 @@
 5. SDL2_mixer-2.0.4
 using Windows10(64bit) + Anaconda Python3.9(64bit)
 
+
 # Build tools
-* download.py(Python3)
+* Run download.py (Python3.5 above)
 * VisualStudio 2015/2017/2019
  or
-* MingW 32bit/64bit
+* MingW (32bit/64bit)
+
 
 # History
 * Fork on
@@ -18,16 +20,25 @@ using Windows10(64bit) + Anaconda Python3.9(64bit)
 * SDL2_mixer added
 * MingW supported
 
+
 # ToDo
 * [o]libpng
 * [ ]libjpeg
 * [ ]libtiff
+* [ ]SDL2_net
+
 
 # How to build
-
 ```
 > python download.py
+
+* VisualStudio
 > premake5_vs2015.bat
-> start build/SDL2.sln
+> start build/SDL2.sln, don't forget to "Retarget Projects" before build
+
+* MingW/MSYS
+> premake5_mingw.bat
+> under MingW64 shell$ cd build && make config=debug_win64 -j6
+> under MingW32 shell$ cd build && make config=debug_win32 -j6
 ```
 
