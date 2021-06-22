@@ -1,4 +1,4 @@
-SDL2_gfx_DIR="SDL2_gfx-1.0.1/"
+SDL2_gfx_DIR="SDL2_gfx-1.0.4/"
 
 project "SDL2_gfx"
 do
@@ -18,7 +18,7 @@ do
         SDL2_gfx_DIR.."*.c",
     }
     includedirs {
-        "SDL2-2.0.4/include",
+        SDL_DIR .. "include",
     }
     defines {
         "WIN32",
@@ -26,10 +26,11 @@ do
         "DLL_EXPORT",
         "_USRDLL",
     }
-    buildoptions { "/wd4996" }
+    if (string.sub(_ACTION, 1, 2) == "vs") then
+        buildoptions { "/wd4996" }
+    end
     libdirs {}
     links {
         "SDL2",
     }
 end
-
