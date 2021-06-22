@@ -1,26 +1,32 @@
-# Windows向けSDL2ビルドスクリプト
-PySDL2で使うために作った。
-Windows10(64bit) + Anaconda版Python3.5(64bit)で動作確認。
+# Build script of Windows's SDL2 sets
+1. SDL2-2.0.14
+2. SDL2_gfx-1.0.4
+3. SDL2_image-2.0.5
+4. SDL2_ttf-2.0.15
+5. SDL2_mixer-2.0.4
+using Windows10(64bit) + Anaconda Python3.9(64bit)
 
-# 必要なもの
-* download.pyが動くPython3
-* VisualStudio2015
+# Build tools
+* download.py(Python3)
+* VisualStudio 2015/2017/2019
+ or
+* MingW 32bit/64bit
 
-# 履歴
-* 20160510 Debugビルド対応(freetypeのzlib)
-* 20160510 libpng対応
-* download.py追加
-* パス間違い修正
+# History
+* Fork on
+* SDL2 families to latest
+* SDL2_mixer added
+* MingW supported
 
 # ToDo
 * [o]libpng
 * [ ]libjpeg
 * [ ]libtiff
 
-# 使い方
+# How to build
 
 ```
-> download.py
+> python download.py
 > premake5_vs2015.bat
 > start build/SDL2.sln
 ```
