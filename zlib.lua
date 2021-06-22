@@ -1,4 +1,4 @@
-ZLIB_DIR="zlib-1.2.8/"
+ZLIB_DIR="zlib-1.2.11/"
 
 project "zlib"
 language "C"
@@ -40,4 +40,3 @@ buildoptions {
 }
 links {
 }
-
