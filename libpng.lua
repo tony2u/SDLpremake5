@@ -1,4 +1,4 @@
-LIBPNG_DIR="libpng-1.6.21/"
+LIBPNG_DIR="libpng-1.6.37/"
 
 project "libpng"
 language "C"
@@ -45,4 +45,3 @@ buildoptions {
 links {
     'zlib',
 }
-
