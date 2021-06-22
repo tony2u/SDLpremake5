@@ -1,4 +1,4 @@
-FREETYPE_DIR="freetype-2.6.3/"
+FREETYPE_DIR="freetype-2.6.5/"
 
 project "freetype"
 language "C"
@@ -75,4 +75,3 @@ buildoptions {
 links {
     'zlib',
 }
-
