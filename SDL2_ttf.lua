@@ -24,6 +24,7 @@ do
     defines {
         "WIN32",
         "_WINDOWS",
+        "DLL_EXPORT",
     }
     if (string.sub(_ACTION, 1, 2) == "vs") then
         buildoptions { "/wd4996" }
