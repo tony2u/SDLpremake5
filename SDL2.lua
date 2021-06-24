@@ -1,5 +1,34 @@
 SDL_DIR="SDL2-2.0.14/"
 
+project "SDL2main"
+do
+    --kind "ConsoleApp"
+    --kind "WindowedApp"
+    --kind "SharedLib"
+    kind "StaticLib"
+    language "C"
+    --language "C++"
+    vectorextensions "SSE"  -- Necessary to run x32
+
+    files {
+        SDL_DIR.."src/main/windows/SDL_windows_main.c",
+    }
+    removefiles { "include/SDL_config*.h" }
+    includedirs {
+        SDL_DIR.."src/hidapi/hidapi",
+        SDL_DIR.."build",
+        SDL_DIR.."include",
+        SDL_DIR.."src/video/khronos",
+    }
+    defines {
+        "WIN32",
+        "_WINDOWS",
+        "USING_GENERATED_CONFIG_H",
+    }
+    libdirs {}
+    links {}
+end
+
 project "SDL2"
 do
     --kind "ConsoleApp"
