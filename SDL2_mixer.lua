@@ -161,6 +161,7 @@ do
         "MPG123_DYNAMIC=\"libmpg123-0.dll\"",
         "MUSIC_MID_TIMIDITY",
         "MUSIC_MID_NATIVE",
+        "DLL_EXPORT",
     }
     if (string.sub(_ACTION, 1, 2) == "vs") then
         buildoptions { "/wd4996" }
