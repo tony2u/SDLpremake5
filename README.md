@@ -19,6 +19,7 @@ using Windows10(64bit) + Anaconda Python3.9(64bit)
 * SDL2 families to latest
 * SDL2_mixer added
 * MingW supported
+* SDL_Engine game framework supported
 
 
 # ToDo
