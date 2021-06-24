@@ -44,6 +44,7 @@ do
         "LOAD_XV",
         "PNG_USE_DLL",
         "ZLIB_DLL",
+        "DLL_EXPORT",
     }
     if (string.sub(_ACTION, 1, 2) == "vs") then
         buildoptions { "/wd4996" }
